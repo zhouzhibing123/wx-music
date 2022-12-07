@@ -1,0 +1,14 @@
+<!--components/recommed-item/recommed-item.wxml-->
+<wxs src="/utils/formart.wxs" module="formart"/>
+
+<view class="video-item">
+  <view class="cover-image">
+    <view  class="play">
+        <image src="/asset/images/video-youtube.png" class="video-youtube"/>
+        <text>{{formart.formartNumber(data.playCount)}}</text>
+    </view>
+    <text class="playTime">{{formart.formartDate(data.mv.videos[0].duration)}}</text>
+    <image src="{{data.cover}}" class="image"/>
+  </view>
+  <text class="text">{{data.artistName + '-'  + data.name}}</text>
+</view>

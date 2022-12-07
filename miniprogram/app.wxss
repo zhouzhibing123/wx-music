@@ -1,0 +1,4 @@
+/**app.wxss**/
+:root{
+  --color-fff : #fff;
+}
