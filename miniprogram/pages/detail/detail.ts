@@ -16,7 +16,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(option) {
+  onLoad(option:any) {
     this.data.resourcessId = Number(option.id)
     // 根据ID请求详情
    this.getDetailData()
