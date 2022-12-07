@@ -3,7 +3,8 @@
 
 <view>
   <video src="{{videoUrl}}" controls autoplay class="video" referrer-policy="origin"/>
-  <view class="container">
+  <scroll-view scroll-y class="scroll-content">
+    <view class="container">
     <view class="detail">
       <view class="name">{{detailInfo.name}}</view>
       <view class="artistName">{{detailInfo.artistName}}</view>
@@ -11,12 +12,13 @@
     </view>
     <view class="recommoned">
       <text class="title">推荐视频</text>
-      <view class="recommoned-list">
-        <block wx:for="{{recommonedList}}" wx:key="vid">
-          <!-- recommend-item -->
-          <recommend-item-v2 data="{{item}}" class="recommoned-item"></recommend-item-v2>
-        </block>
-      </view>
+        <view class="recommoned-list">
+          <block wx:for="{{recommonedList}}" wx:key="vid">
+            <!-- recommend-item -->
+            <recommend-item-v2 data="{{item}}" class="recommoned-item"></recommend-item-v2>
+          </block>
+        </view>
     </view>
-  </view>
+    </view>
+  </scroll-view>
 </view>

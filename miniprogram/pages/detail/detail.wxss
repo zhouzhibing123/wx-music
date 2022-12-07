@@ -1,12 +1,11 @@
 /* pages/detail/detail.wxss */
 .video{
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 100;
 }
 .container{
   position: relative;
-  top: 225px;
   padding: 10px;
 }
 /* detail  */
@@ -32,6 +31,9 @@
 .recommoned .title{
   font-size: 18px;
   font-weight: 500;
+}
+.scroll-content{
+  height: calc(100vh - 225px);
 }
 .recommoned-list{
   display: flex;
