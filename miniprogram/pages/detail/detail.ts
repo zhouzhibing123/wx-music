@@ -1,11 +1,16 @@
 // pages/detail/detail.ts
+import { getVideoDetail,getVideoUrl,getRecommoned } from '../../services/modules/detail/index'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    resourcessId: 0
+    resourcessId: 14579633,
+    videoUrl: '',
+    detailInfo: {},
+    recommonedList: []
   },
 
   /**
@@ -14,54 +19,18 @@ Page({
   onLoad(option) {
     this.data.resourcessId = Number(option.id)
     // 根据ID请求详情
+   this.getDetailData()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  // 获取页面信息
+  async getDetailData(){
+    const data = await getVideoDetail(this.data.resourcessId)
+    const videoUrl = await getVideoUrl(this.data.resourcessId)
+    const recommonedList = await getRecommoned(this.data.resourcessId)
+    this.setData({
+      videoUrl: videoUrl.data.data.url,
+      detailInfo: data.data.data,
+      recommonedList: recommonedList.data.data
+    })
   }
 })

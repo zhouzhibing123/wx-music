@@ -1,4 +1,4 @@
-// components/recommed-item/recommed-item.ts
+// components/recommend-item-v2/recommend-item-v2.ts
 Component({
   /**
    * 组件的属性列表

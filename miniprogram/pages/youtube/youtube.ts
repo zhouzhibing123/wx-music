@@ -1,5 +1,5 @@
 // pages/youtube/youtube.ts
-import XHRequestV1 from '../../services/index'
+import { getVideos } from '../../services/modules/youtube/index'
 
 Page({
   data: {
@@ -13,6 +13,7 @@ Page({
     this.requestVideos()
   },
 
+  // 视频链接被点击
   onRecommedClick(e:any){
     const target = e.currentTarget
     wx.navigateTo({
@@ -21,17 +22,13 @@ Page({
   },
 
   // request videos 
-  requestVideos(){
+  async requestVideos(){
     const query = this.data.query
-    XHRequestV1.get({
-      url: '/top/mv',
-      data: { ...this.data.query, offset: query.limit * query.page}
-    }).then(res=>{
-      (typeof res.data.data == 'undefined') && (res.data.data = [])
-      wx.stopPullDownRefresh()
-      this.setData({
-        videos : [...this.data.videos,...res.data.data]
-      })
+    const res = await getVideos(query);
+    res.data.data = res.data.data ? res.data.data : [];
+    wx.stopPullDownRefresh()
+    this.setData({
+      videos : [...this.data.videos,...res.data.data]
     })
   },
   

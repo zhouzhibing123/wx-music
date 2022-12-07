@@ -1,0 +1,26 @@
+/* components/recommend-item-v2/recommend-item-v2.wxss */
+.recommend-item{
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+}
+.recommend-item .image{
+  width: 130px;
+  height: 70px;
+  border-radius: 4px;
+}
+.recommend-item .description{
+  position: relative;
+  width: 50%;
+  margin-left: 10px;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.description-title{
+  font-weight: 700;
+}
+.creator{
+  position: absolute;
+  color: #ab9da3;
+  bottom: 5px;
+}

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "recommend-item-v2": "/components/recommend-item-v2/recommend-item-v2"
+  },
+  "navigationBarTitleText" : "详情"
 }
