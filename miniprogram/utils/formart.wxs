@@ -1,0 +1,25 @@
+function formartNumber(num){
+  if(!(typeof num == 'number')) return false
+  if(num < 10000) return num
+
+  function sub(num){
+    return num.toString().substring(0,1)
+  }
+  var w = sub(num / 10000)
+  var k = sub(num % 10000)
+  return w + '.' + k + '万'
+}
+
+function formartDate(date){
+  date = date / 1000
+  var min = Math.floor(date / 60 % 60)
+  var second = date % 60
+  if(min < 10) min = '0' + min
+  if(second < 10) second = '0' + second
+  return min + ':' + second
+}
+
+module.exports = {
+  formartNumber: formartNumber,
+  formartDate: formartDate
+}

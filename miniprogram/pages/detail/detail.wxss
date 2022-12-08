@@ -1,0 +1,45 @@
+/* pages/detail/detail.wxss */
+.video{
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+.container{
+  position: relative;
+  padding: 10px;
+}
+/* detail  */
+.detail .name{
+  font-size: 22px;
+  font-weight: 700;
+}
+.detail .artistName{
+  font-size: 12px;
+  color: #ab9da3;
+  margin-top: 3px;
+}
+.detail .other{
+  font-size: 12px;
+  color: #ab9da3;
+  margin-top: 3px;
+}
+
+/* recommoned */
+.recommoned{
+  margin-top: 30px;
+}
+.recommoned .title{
+  font-size: 18px;
+  font-weight: 500;
+}
+.scroll-content{
+  height: calc(100vh - 225px);
+}
+.recommoned-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.recommoned-list>.recommoned-item{
+  width: 100%;
+}

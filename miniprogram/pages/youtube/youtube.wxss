@@ -1,0 +1,8 @@
+/* pages/youtube/youtube.wxss */
+.list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.recommed-item{
+  width: 50%;
+}

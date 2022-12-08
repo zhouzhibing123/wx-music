@@ -1,0 +1,8 @@
+<!--pages/youtube/youtube.wxml-->
+<view class="container">
+  <view class="list">
+    <block wx:for="{{videos}}" wx:key="id">
+      <recommed-item data="{{item}}" class="recommed-item" bindtap="onRecommedClick" data-id="{{item.id}}"></recommed-item>
+    </block>
+  </view>
+</view>

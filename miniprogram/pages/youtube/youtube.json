@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "recommed-item": "/components/recommed-item/recommed-item"
+  },
+  "backgroundTextStyle" : "dark",
+  "navigationBarTitleText" : "推荐视频",
+  "enablePullDownRefresh" : true,
+  "onReachBottomDistance" : 200
+}

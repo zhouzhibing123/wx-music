@@ -1,0 +1,18 @@
+<!--components/recommend-item-v2/recommend-item-v2.wxml-->
+
+<view class="recommend-item">
+  <image src="{{data.coverUrl}}" class="image"/>
+  <!-- info  -->
+  <view class="description">
+    <!-- title  -->
+    <view class="description-title">
+      {{data.title}}
+    </view>
+    <!-- creator  -->
+    <view class="creator">
+      <block wx:for="{{data.creator}}" wx:key="userId">
+          <text>{{item.userName}}</text>
+      </block>
+    </view>
+  </view>
+</view>
